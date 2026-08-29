@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-white/10;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-ink text-white font-body antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+
+  ::selection {
+    background: #8FDAFA;
+    color: #05070A;
+  }
+
+  /* Native form controls should follow the dark site theme */
+  input,
+  textarea,
+  select,
+  button {
+    color-scheme: dark;
+  }
+
+  select {
+    color: #ffffff;
+    background-color: #101419;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  select:focus {
+    outline: none;
+  }
+
+  /* Chromium / WebKit native option popup */
+  select option,
+  select optgroup {
+    background-color: #101419 !important;
+    color: #ffffff !important;
+  }
+
+  select option:checked,
+  select option:hover,
+  select option:focus {
+    background: #1a2633 !important;
+    color: #ffffff !important;
+  }
+
+  /* Firefox */
+  @-moz-document url-prefix() {
+    select {
+      background-color: #101419;
+      color: #ffffff;
+    }
+
+    select option {
+      background-color: #101419;
+      color: #ffffff;
+    }
+  }
+}
+
+@layer utilities {
+  .bg-grid {
+    background-image:
+      linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+
+  .text-gradient {
+    background: linear-gradient(90deg, #FFFFFF 0%, #CFEFFF 55%, #8FDAFA 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .text-gradient-royal {
+    background: linear-gradient(90deg, #FFFFFF 0%, #8FDAFA 45%, #2F7BFF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .eyebrow {
+    @apply font-mono text-[11px] tracking-[0.28em] uppercase text-sky2;
+  }
+
+  .noise {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #05070A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a2531;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #26364a;
+}

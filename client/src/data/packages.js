@@ -1,0 +1,45 @@
+export const packages = [
+  {
+    id: "essential",
+    name: "Nexora Cloud Essential",
+    audience: "For small businesses",
+    features: [
+      "Linux monitoring",
+      "Monthly health check",
+      "Patch management",
+      "Basic troubleshooting",
+      "Backup monitoring",
+      "Monthly report",
+    ],
+  },
+  {
+    id: "professional",
+    name: "Nexora Cloud Professional",
+    audience: "For growing companies",
+    highlighted: true,
+    features: [
+      "Everything in Essential",
+      "Security hardening",
+      "Vulnerability remediation",
+      "Performance optimization",
+      "Ansible automation",
+      "Priority support",
+    ],
+  },
+  {
+    id: "enterprise",
+    name: "Nexora Cloud Enterprise",
+    audience: "For production environments",
+    features: [
+      "24×7 monitoring",
+      "L1 / L2 / L3 support",
+      "SLA-backed response",
+      "Incident management",
+      "Security management",
+      "Backup & disaster recovery",
+      "Automation",
+      "Dedicated engineers",
+      "Monthly infrastructure report",
+    ],
+  },
+];
